@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #333;
+}
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #96610d;
+    border-radius: 10px;
+}
+
+nav {
+    background-color: #96610d;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 0em;
+}
+
+nav ul .navLogo {
+    font-size: 1.5rem;
+    padding-top: 1.2em;
+    padding-left: 0.5em;
+}
+
+nav ul .navLogo a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul .navItm {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.3s ease;
+}
+
+nav ul .navItm li {
+    list-style: none;
+    padding: 1em 0.3em;
+    transition: all 0.3s ease;
+}
+
+nav ul .navItm li a {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+nav ul .navItm li a::before {
+    content: "";
+    height: 3px;
+    position: absolute;
+    top: -20px;
+    background-color: #fff;
+    width: 0%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+nav ul .navItm li:hover a::before {
+    width: 100%;
+    opacity: 1;
+}
+
+nav ul .navItm li:first-child a::before {
+    width: 100%;
+    opacity: 1;
+}
+
+nav ul .navItm li:first-child {
+    background-color: #333;
+}
+
+nav ul .navItm li:first-child a {
+    color: #fff;
+}
+
+nav ul .navItm li:hover {
+    background-color: #333;
+}
+
+nav ul .navItm li:hover a {
+    color: #fff;
+}
+
+.navLogo .menuBtn,
+.navLogo .closenav {
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navLogo .menuBtn:active,
+.navLogo .closenav:active {
+    transform: scale(1.2);
+}
+
+.navLogo .closenav {
+    top: 11px;
+    font-size: 45px;
+    display: none;
+}
+
+.btmBody {
+    background-image: url(imgsrc/bgimgjpg.jpg);
+    height: 50rem;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btmBody hgroup {
+    padding-top: 16em;
+    text-align: center;
+    color: #fff;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+}
+
+.btmBody hgroup h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btmBody hgroup span {
+    color: #96610d;
+}
+
+.btmBody hgroup li {
+    list-style: none;
+    display: inline;
+    border-right: 3px solid #fff;
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: 0.8rem;
+}
+
+.btmBody hgroup .fi {
+    border-left: 3px solid #fff;
+}
+
+.btmBody hgroup button {
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 50%;
+    background-color: #96610d;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.articleBody {
+    background-color: #333;
+    padding: 0.2em 0.5em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.articleBody .header {
+    color: #fff;
+    padding-top: 0.5em;
+    font-size: 1.1rem;
+}
+
+.articleBody .articleImage img {
+    width: 100%;
+    padding-top: 0.2em;
+    border-radius: 8px;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+}
+
+.articleBody .articleImage img:hover {
+    filter: grayscale(0);
+    transform: translateY(10px);
+}
+
+.articleCont {
+    background-color: #96610d;
+    margin-top: 0.4em;
+    padding: 0.5em;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.articleCont:hover {
+    background-color: #b57e26;
+    transform: translateY(10px);
+}
+
+.content01 {
+    background-color: #333;
+    padding: 1em 0.5em;
+}
+
+.content01 h3,
+p {
+    color: #fff;
+    text-align: center
+}
+
+.cardCarousel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.cardArticle p {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.owl-carousel .owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #96610d!important;
+    transition: all 0.3s ease;
+}
+
+.owl-carousel .owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-carousel .owl-dot.active,
+.owl-carousel .owl-dot:hover {
+    background-color: #96610d!important;
+}
+
+.owl-controls {
+    margin-left: 0px;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 96%;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: none;
+    color: #cecece;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.owl-prev:active,
+.owl-next:active {
+    transform: scale(1.4);
+    color: #fff;
+}
+
+.viewGallery img {
+    background-color: #333;
+    padding-top: 2em;
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    object-fit: cover;
+}
+
+.viewGallery hgroup {
+    position: relative;
+    margin-top: -569px;
+    z-index: 2;
+    text-align: center;
+    height: 566px;
+    color: #fff;
+    padding-top: 13em;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.19));
+}
+
+.viewGallery hgroup h2 {
+    font-size: 2em;
+}
+
+.viewGallery hgroup h6 {
+    font-size: 1em;
+}
+
+.viewGallery hgroup button {
+    width: 40%;
+    padding: 1em;
+    border: none;
+    background-color: #96610d;
+    color: #fff;
+}
+
+footer {
+    background-color: #262525;
+    width: 100%;
+    justify-content: center;
+}
+
+.footerCont {
+    justify-content: space-around;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1em;
+    text-align: center;
+}
+
+.footerCont .brandSect {
+    padding: 2em;
+}
+
+.footerCont .brandSect h4 {
+    margin-top: 1em;
+}
+
+.section h6 {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.section ul {
+    margin-left: -30px;
+}
+
+.section ul li {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.section p {
+    margin-top: 0px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.section ul li a {
+    text-decoration: none;
+    color: #cecece;
+}
+
+.section .social {
+    margin-left: -20px;
+    margin-top: -10px;
+}
+
+.section .social a {
+    margin-left: 20px;
+    color: #cecece;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.section .social a:hover,
+.section ul li a:hover {
+    color: #fff;
+}
+
+.section .chat button {
+    padding: 10px 20px;
+    width: 150px;
+    margin-top: 1em;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    color: #cecece;
+    border: 1px solid #96610d;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section .chat button:hover {
+    color: #fff;
+}
+
+.footerCopyright {
+    text-align: center;
+}
+
+.footerCopyright p {
+    margin-bottom: 0em;
+}
+
+
+/* mediaQueries */
+
+@media (min-width: 440px) {
+    .footerCont .brandSect h4 {
+        margin-top: 4em;
+    }
+    .section {
+        margin-left: 0px;
+    }
+    .section ul {
+        margin-left: 0px;
+    }
+    .section ul li {
+        text-align: left;
+        list-style: none;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .footerCont {
+        flex-direction: row;
+    }
+    .footerCopyright p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 800px) {
+    nav {
+        height: 55px;
+    }
+    .navLogo .menuBtn,
+    .navLogo .closenav {
+        display: none;
+    }
+    nav ul .navLogo {
+        font-size: 1.5rem;
+        padding-top: 0em;
+    }
+    nav ul {
+        justify-content: space-between;
+    }
+    nav ul,
+    nav ul .navItm {
+        flex-direction: row;
+    }
+    nav ul .navItm {
+        height: 55px;
+        justify-content: space-around;
+        text-align: center;
+        margin-right: 30px;
+    }
+    nav ul .navItm li {
+        padding: 1em 2em;
+    }
+    .btmBody hgroup {
+        padding-top: 14em;
+        text-align: left;
+        color: #fff;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+    .btmBody hgroup li {
+        display: block;
+        margin-top: 10px;
+        border: none;
+    }
+    .btmBody hgroup .fi {
+        border: none;
+    }
+    .btmBody hgroup h2 {
+        font-size: 2rem;
+    }
+    .btmBody hgroup button {
+        width: 20%;
+        margin-top: 0em;
+    }
+    article {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .articleBody .header {
+        text-align: right;
+        margin-right: 4em;
+        font-size: 1.9rem;
+    }
+    .articleCont {
+        margin-left: 1em;
+    }
+    .owl-controls {
+        width: 100%;
+    }
+    .owl-prev,
+    .owl-next {
+        display: inline;
+    }
+    .owl-next {
+        right: 20rem;
+    }
+    .owl-prev {
+        left: 20rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .articleCont {
+        width: 80%;
+    }
+    .content01 {
+        padding-top: 4em;
+    }
+    .content01 h3,
+    .content01 p {
+        color: #fff;
+        text-align: left;
+    }
+    .content01 p {
+        margin-left: 2em;
+    }
+    .cardArticle p {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .btmBody hgroup h2 {
+        font-size: 2rem;
+    }
+    .btmBody hgroup li {
+        font-size: 1.2rem;
+    }
+    .btmBody hgroup button {
+        width: 10%;
+    }
+    .owl-next {
+        right: 20rem;
+    }
+    .owl-prev {
+        left: 20rem;
+    }
+    .viewGallery hgroup h2 {
+        font-size: 3em;
+    }
+    .viewGallery hgroup button {
+        width: 20%;
+    }
+    .articleCont p {
+        text-align: left;
+        font-size: 1.1rem;
+        margin-top: 4em;
+    }
+}
+
+@media (min-width: 1354px) {
+    .owl-next {
+        right: 30rem;
+    }
+    .owl-prev {
+        left: 30rem;
+    }
+    .viewGallery hgroup button {
+        width: 16%;
+    }
+}
